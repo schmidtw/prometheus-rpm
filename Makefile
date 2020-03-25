@@ -21,7 +21,8 @@ memcached_exporter \
 smokeping_prober \
 exporter_exporter \
 iperf3_exporter \
-couchbase_exporter
+couchbase_exporter \
+dnsmasq_exporter
 
 AUTO_GENERATED = node_exporter \
 mysqld_exporter \

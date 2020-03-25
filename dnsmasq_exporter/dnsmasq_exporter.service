@@ -1,0 +1,15 @@
+# -*- mode: conf -*-
+
+[Unit]
+Description=Prometheus dnsmasq exporter.
+Documentation=https://github.com/prometheus/dnsmasq_exporter
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/default/dnsmasq_exporter
+User=prometheus
+ExecStart=/usr/bin/dnsmasq_exporter $DNSMASQ_EXPORTER_OPTS
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
